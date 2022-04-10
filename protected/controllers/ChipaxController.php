@@ -6,11 +6,7 @@ class ChipaxController extends Controller
     public function actionAdd()
 	{ 
         ini_set("memory_limit", "-1");
-        set_time_limit(0);
-	    
-	    echo "TESTING";
-	    die;
-	    
+        set_time_limit(0);	    
         $connection= Yii::app()->db;
 		$respuesta = json_encode(['status'=>'OK','message' => ""]);
         $errores = [];
