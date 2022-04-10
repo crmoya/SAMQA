@@ -5,6 +5,11 @@ class ChipaxController extends Controller
 
     public function actionAdd()
 	{
+	    echo "<pre>";
+	    $gastoJson = json_decode(file_get_contents("php://input"), true);
+	    print_r($gastoJson);
+	    die;
+	    
         ini_set("memory_limit", "-1");
         set_time_limit(0);
         $connection= Yii::app()->db;
